@@ -7,163 +7,323 @@ current: index
 
 
 <main>
-  <section class="subscription text-center py-8">
-    <h5 class="mb-6">每天都想獲得一則豆知識推播嗎？</h5>
-    <div class="d-flex justify-content-center">
-      <input type="text" placeholder="|請輸入您的Email " class="me-1">
-      <input type="submit" value="我要訂閱" class="submit px-3">
+  <section class="main-content">
+    <div class="container">
+      <!-- 類別搜尋區 -->
+      <div class="search-area d-flex justify-content-center">
+        <select name="" class="regionSearch">
+          <option value="地區搜尋" disabled selected hidden>類別搜尋</option>
+          <option value="">全部類別</option>
+          <option value="麵包">麵包</option>
+          <option value="甜點">甜點</option>
+        </select>
+      </div>
+      <div class="row justify-content-center py-8 ">
+        <ul class="ticketCard-area d-flex">
+          <li class="ticketCard">
+            <div class="ticketCard-img">
+              <a href="#">
+                <img src="./assets/images/bread-1.jpg" alt="">
+              </a>
+              <div class="ticketCard-region">高雄</div>
+            </div>
+            <div class="ticketCard-content">
+              <div>
+                <h3>
+                  <a href="#" class="ticketCard-name">綠島自由行套裝行程</a>
+                </h3>
+                <p class="ticketCard-description">
+                  嚴選超高CP值綠島自由行套裝行程，多種綠島套裝組合。
+                </p>
+              </div>
+              <div class="ticketCard-info">
+                <p class="ticketCard-price me-2">
+                  NT$ <span id="ticketCard-price">$1400</span>
+                </p>
+                <P>/條</P>
+              </div>
+              <div class="cart-btn p-3 text-center">
+                加入購物車
+              </div>
+            </div>
+          </li>
+          <li class="ticketCard">
+            <div class="ticketCard-img">
+              <a href="#">
+                <img src="./assets/images/bread-2.jpg" alt="">
+              </a>
+              <div class="ticketCard-region">台北</div>
+            </div>
+            <div class="ticketCard-content">
+              <div>
+                <h3>
+                  <a href="#" class="ticketCard-name">清境高空觀景步道</a>
+                </h3>
+                <p class="ticketCard-description">
+                  清境農場青青草原數十公頃碧草，這些景觀豐沛了清境觀景步道的風格，也涵養它無可取代的特色。
+                </p>
+              </div>
+              <div class="ticketCard-info">
+                <div class="ticketCard-num">
+                  <p>
+                    <span><i class="fas fa-exclamation-circle"></i></span>
+                    剩下最後 <span id="ticketCard-num"> 99 </span> 組
+                  </p>
+                </div>
+                <p class="ticketCard-price">
+                  NT <span id="ticketCard-price">$240</span>
+                </p>
+              </div>
+              <div class="cart-btn p-3 text-center">
+                加入購物車
+              </div>
+            </div>
+          </li>
+          <li class="ticketCard">
+            <div class="ticketCard-img">
+              <a href="#">
+                <img src="./assets/images/bread-3.jpg" alt="">
+              </a>
+              <div class="ticketCard-region">台中</div>
+            </div>
+            <div class="ticketCard-content">
+              <div>
+                <h3>
+                  <a href="#" class="ticketCard-name">山林悠遊套票</a>
+                </h3>
+                <p class="ticketCard-description">
+                  山林悠遊套票，結合南投清境高空步道、雙龍瀑布七彩吊橋、瑞龍瀑布園區之熱門景點。
+                </p>
+              </div>
+              <div class="ticketCard-info">
+                <div class="ticketCard-num">
+                  <p>
+                    <span><i class="fas fa-exclamation-circle"></i></span>
+                    剩下最後 <span id="ticketCard-num"> 20 </span> 組
+                  </p>
+                </div>
+                <p class="ticketCard-price">
+                  NT <span id="ticketCard-price">$1765</span>
+                </p>
+              </div>
+              <div class="cart-btn p-3 text-center">
+                加入購物車
+              </div>
+            </div>
+          </li>
+          <li class="ticketCard">
+            <div class="ticketCard-img">
+              <a href="#">
+                <img src="./assets/images/bread-4.jpg" alt="">
+              </a>
+              <div class="ticketCard-region">高雄</div>
+            </div>
+            <div class="ticketCard-content">
+              <div>
+                <h3>
+                  <a href="#" class="ticketCard-name">綠島自由行套裝行程</a>
+                </h3>
+                <p class="ticketCard-description">
+                  嚴選超高CP值綠島自由行套裝行程，多種綠島套裝組合。
+                </p>
+              </div>
+              <div class="ticketCard-info">
+                <p class="ticketCard-num">
+                  <span><i class="fas fa-exclamation-circle"></i></span>
+                  剩下最後 <span id="ticketCard-num"> 87 </span> 組
+                </p>
+                <p class="ticketCard-price">
+                  NT <span id="ticketCard-price">$1400</span>
+                </p>
+              </div>
+              <div class="cart-btn p-3 text-center">
+                加入購物車
+              </div>
+            </div>
+          </li>
+          <li class="ticketCard">
+            <div class="ticketCard-img">
+              <a href="#">
+                <img src="./assets/images/bread-5.jpg" alt="">
+              </a>
+              <div class="ticketCard-region">高雄</div>
+            </div>
+            <div class="ticketCard-content">
+              <div>
+                <h3>
+                  <a href="#" class="ticketCard-name">綠島自由行套裝行程</a>
+                </h3>
+                <p class="ticketCard-description">
+                  嚴選超高CP值綠島自由行套裝行程，多種綠島套裝組合。
+                </p>
+              </div>
+              <div class="ticketCard-info">
+                <p class="ticketCard-num">
+                  <span><i class="fas fa-exclamation-circle"></i></span>
+                  剩下最後 <span id="ticketCard-num"> 87 </span> 組
+                </p>
+                <p class="ticketCard-price">
+                  NT <span id="ticketCard-price">$1400</span>
+                </p>
+              </div>
+              <div class="cart-btn p-3 text-center">
+                加入購物車
+              </div>
+            </div>
+          </li>
+          <li class="ticketCard">
+            <div class="ticketCard-img">
+              <a href="#">
+                <img src="./assets/images/bread-6.jpg" alt="">
+              </a>
+              <div class="ticketCard-region">高雄</div>
+            </div>
+            <div class="ticketCard-content">
+              <div>
+                <h3>
+                  <a href="#" class="ticketCard-name">綠島自由行套裝行程</a>
+                </h3>
+                <p class="ticketCard-description">
+                  嚴選超高CP值綠島自由行套裝行程，多種綠島套裝組合。
+                </p>
+              </div>
+              <div class="ticketCard-info">
+                <p class="ticketCard-num">
+                  <span><i class="fas fa-exclamation-circle"></i></span>
+                  剩下最後 <span id="ticketCard-num"> 87 </span> 組
+                </p>
+                <p class="ticketCard-price">
+                  NT <span id="ticketCard-price">$1400</span>
+                </p>
+              </div>
+              <div class="cart-btn p-3 text-center">
+                加入購物車
+              </div>
+            </div>
+          </li>
+
+          <li class="ticketCard">
+            <div class="ticketCard-img">
+              <a href="#">
+                <img src="./assets/images/bread-7.jpg" alt="">
+              </a>
+              <div class="ticketCard-region">高雄</div>
+            </div>
+            <div class="ticketCard-content">
+              <div>
+                <h3>
+                  <a href="#" class="ticketCard-name">綠島自由行套裝行程</a>
+                </h3>
+                <p class="ticketCard-description">
+                  嚴選超高CP值綠島自由行套裝行程，多種綠島套裝組合。
+                </p>
+              </div>
+              <div class="ticketCard-info">
+                <p class="ticketCard-num">
+                  <span><i class="fas fa-exclamation-circle"></i></span>
+                  剩下最後 <span id="ticketCard-num"> 87 </span> 組
+                </p>
+                <p class="ticketCard-price">
+                  NT <span id="ticketCard-price">$1400</span>
+                </p>
+              </div>
+              <div class="cart-btn p-3 text-center">
+                加入購物車
+              </div>
+            </div>
+          </li>
+
+          <li class="ticketCard">
+            <div class="ticketCard-img">
+              <a href="#">
+                <img src="./assets/images/bread-8.jpg" alt="">
+              </a>
+              <div class="ticketCard-region">高雄</div>
+            </div>
+            <div class="ticketCard-content">
+              <div>
+                <h3>
+                  <a href="#" class="ticketCard-name">綠島自由行套裝行程</a>
+                </h3>
+                <p class="ticketCard-description">
+                  嚴選超高CP值綠島自由行套裝行程，多種綠島套裝組合。
+                </p>
+              </div>
+              <div class="ticketCard-info">
+                <p class="ticketCard-num">
+                  <span><i class="fas fa-exclamation-circle"></i></span>
+                  剩下最後 <span id="ticketCard-num"> 87 </span> 組
+                </p>
+                <p class="ticketCard-price">
+                  NT <span id="ticketCard-price">$1400</span>
+                </p>
+              </div>
+              <div class="cart-btn p-3 text-center">
+                加入購物車
+              </div>
+            </div>
+          </li>
+
+          <li class="ticketCard">
+            <div class="ticketCard-img">
+              <a href="#">
+                <img src="./assets/images/bread-9.jpg" alt="">
+              </a>
+              <div class="ticketCard-region">高雄</div>
+            </div>
+            <div class="ticketCard-content">
+              <div>
+                <h3>
+                  <a href="#" class="ticketCard-name">綠島自由行套裝行程</a>
+                </h3>
+                <p class="ticketCard-description">
+                  嚴選超高CP值綠島自由行套裝行程，多種綠島套裝組合。
+                </p>
+              </div>
+              <div class="ticketCard-info">
+                <p class="ticketCard-num">
+                  <span><i class="fas fa-exclamation-circle"></i></span>
+                  剩下最後 <span id="ticketCard-num"> 87 </span> 組
+                </p>
+                <p class="ticketCard-price">
+                  NT <span id="ticketCard-price">$1400</span>
+                </p>
+              </div>
+              <div class="cart-btn p-3 text-center">
+                加入購物車
+              </div>
+            </div>
+          </li>
+        </ul>
+          
+          
+        </div>
+      </div>
     </div>
   </section>
 
-  <section class="intro bg-primary">
-    <div class="container">
-      <div class="row justify-content-center g-lg-9 g-md-4">
-        <div class="side col-lg-4 col-md-5 d-none d-md-block text-white d-flex flex-column text-center">
-          <div class="left-item py-7">
-            <div class="mb-9 d-flex flex-column align-items-center">
-              <img src="././assets/images/ImgBulb.svg" alt="" class="mb-5" width="50">
-              <img src="./assets/images/Logo.svg" width="130" height="42" class="mb-4" alt="logo">
-              <p class="mb-5">摘要型知識網站</p>
-              <div class="d-flex gap-4">
-                <a href="https://www.instagram.com/">
-                  <img src="././assets/images/IconInstagram.svg" alt="">
-                </a>
-                <a href="https://www.facebook.com/">
-                  <img src="././assets/images/IconFacebook.svg" alt="">
-                </a>
-                <a href="https://line.me/zh-hant/">
-                  <img src="././assets/images/IconLine.svg" alt="">
-                </a>
-              </div>
-            </div>
-            <h3 class="mb-5">今日冷知識</h3>
-            <div class="border mb-9 py-6 px-7">
-              <h5 class="mb-4">當有人說你腦袋進水</h5>
-              <p class="text-start">大腦確實含水比例為 75%，水分攝取<br>不足會影響大腦認知功能及情緒，所以<br>這句話的用法應該是：你腦袋缺水。</p>
-            </div>
-            <h3 class="mb-5">今日豆推書</h3>
-            <div class="border mb-9 py-6 px-7">
-              <h5 class="mb-6">冷知識背後的熱思考</h5>
-              <img src="././assets/images/ImgBook.png" alt="" class="mb-6">
-              <p class="text-start ms-3">啾啾鞋教你大腦開外掛的 30 個法則，往更好的方向前進！</p>
-            </div>
-          </div>
-        </div>
-        <div class="topic col-lg-6 col-md-7">
-          <h2 class="mb-8 text-center">精選主題</h2>
-          <div class="item d-flex flex-column gap-6">       
-            <div class="card-box bg-white d-flex flex-column align-items-center py-6 px-4 px-md-0">
-              <h3>身體保健</h3>
-              <img src="././assets/images/ImgTopic01.svg" alt="..." width="240" height="300" class="mb-4">
-              <span class="card-text mb-5">
-                <div class="mb-2">
-                  <img src="./assets/images/PlayArrow.svg" alt="">
-                  <span>除了三高還有一骨密</span>
-                </div>
-                <div class="mb-2">
-                  <img src="./assets/images/PlayArrow.svg" alt="">
-                  <span>透過自我覺察，提升身體的療癒力</span>
-                </div>
-                <div>
-                  <img src="./assets/images/PlayArrow.svg" alt="">
-                  <span>腸道菌叢多樣性與健康有關</span>
-                </div>
-              </span>
-              <span class="btn">
-                <a href="./healthcare.html" class="fw-bold">Read More</a>
-              </span>
-            </div>
-
-            <div class="card-box bg-white d-flex flex-column align-items-center py-6 px-4 px-md-0">
-              <h3>心靈養分</h3>
-              <img src="././assets/images/ImgTopic01.svg" alt="..." width="240" height="300" class="mb-4">
-              <span class="card-text mb-5">
-                <div class="mb-2">
-                  <img src="./assets/images/PlayArrow.svg" alt="">
-                  <span>生活中的各種不安</span>
-                </div>
-                <div class="mb-2">
-                  <img src="./assets/images/PlayArrow.svg" alt="">
-                  <span>人為什麼想要被認可</span>
-                </div>
-                <div>
-                  <img src="./assets/images/PlayArrow.svg" alt="">
-                  <span>當雙方想法分歧時，你容易陷入壓力嗎</span>
-                </div>
-              </span>
-
-              <span class="btn">
-                <a href="./heart.html" class="fw-bold">Read More</a>
-              </span>
-            </div>
-
-            <div class="card-box bg-white d-flex flex-column align-items-center py-6 px-4 px-md-0">
-              <h3>自我成長</h3>
-              <img src="././assets/images/ImgTopic01.svg" alt="..." width="240" height="300" class="mb-4">
-              <span class="card-text mb-5">
-                <div class="mb-2">
-                  <img src="./assets/images/PlayArrow.svg" alt="">
-                  <span>高敏人的職場放鬆課</span>
-                </div>
-                <div class="mb-2">
-                  <img src="./assets/images/PlayArrow.svg" alt="">
-                  <span>談一場不追不求的戀愛</span>
-                </div>
-                <div>
-                  <img src="./assets/images/PlayArrow.svg" alt="">
-                  <span>每天細微的改變帶來巨大成就</span>
-                </div>
-              </span>
-              <span class="btn d-flex">
-                <a href="./grow.html" class="fw-bold">Read More</a>
-              </span>
-            </div>
-
-            <div class="card-box bg-white d-flex flex-column align-items-center py-6 px-4 px-md-0">
-              <h3>生活科技</h3>
-              <img src="././assets/images/ImgTopic01.svg" alt="..." width="240" height="300" class="mb-4">
-              <span class="card-text mb-5">
-                <div class="mb-2">
-                  <img src="./assets/images/PlayArrow.svg" alt="">
-                  <span>如何辨別天然愛玉凍</span>
-                </div>
-                <div class="mb-2">
-                  <img src="./assets/images/PlayArrow.svg" alt="">
-                  <span>日常應用的電池種類該怎麼選擇</span>
-                </div>
-                <div>
-                  <img src="./assets/images/PlayArrow.svg" alt="">
-                  <span>Github 將程式碼打包送往北極保存</span>
-                </div>
-              </span>
-              <span class="btn">
-                <a href="./life.html" class="fw-bold">Read More</a>
-              </span>
-            </div>
-
-            <div class="card-box bg-white d-flex flex-column align-items-center py-6 px-4 px-md-0">
-              <h3>社會觀察</h3>
-              <img src="././assets/images/ImgTopic01.svg" alt="..." width="240" height="300" class="mb-4">
-              <span class="card-text mb-5">
-                <div class="mb-2">
-                  <img src="./assets/images/PlayArrow.svg" alt="">
-                  <span>在資本主義遊戲中的脫貧法則</span>
-                </div>
-                <div class="mb-2">
-                  <img src="./assets/images/PlayArrow.svg" alt="">
-                  <span>人口老化的長壽社會，是災禍還是禮物</span>
-                </div>
-                <div>
-                  <img src="./assets/images/PlayArrow.svg" alt="">
-                  <span>科技人才需求「由過熱到急凍」</span>
-                </div>
-              </span>
-              <span class="btn">
-                <a href="./world.html" class="fw-bold">Read More</a>
-              </span>
-            </div>
-            
-
+   <!-- 購物車區 -->
+  <section class="shoppingCart">
+    <div class="container shoppingCart-container">
+      <div class="title d-flex justify-content-center mb-7">
+        <span class="material-icons me-3">
+          shopping_cart
+        </span>
+        <h3>我的預購單</h3>
+      </div>
+      <div class="row col-md-8 py-3 mx-auto cart-header">
+        <div class="col-5">品名</div>
+        <div class="col-3">數量</div>
+        <div class="col-3">單價</div>
+        <div class="col-1"></div>
+      </div>
+      <div class="cart-body-area">
+        <div class="row col-md-8 py-3 mx-auto cart-body">
+          <div class="col-5">香蒜奶油麵包</div>
+          <div class="col-3">1</div>
+          <div class="col-3">199</div>
+          <div class="col-1 clear btn">
+            X 
           </div>
         </div>
       </div>
