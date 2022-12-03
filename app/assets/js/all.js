@@ -135,6 +135,8 @@ renderCard();
 
 
 
+
+
 //按鈕：加入預購清單
 const cart = document.querySelector(".cart-body-area");
 const btn0 = document.querySelector(".btn0");
@@ -209,26 +211,56 @@ function addCart(id){
 
   })
 
-  //刪除單筆預購品項
-  function addClear(){
-    cart.addEventListener('click', function(e) {
-      console.log(e);
-
-      if(e.target.getAttribute("class")!=="clear"){
-        return;
-      }else{
-        let num = e.target.getAttribute("data-num");
-        console.log(num);
-        CartListStr.splice(num,1);
-        console.log(CartListStr);
-        alert("刪除成功！");
-        cart.innerHTML = CartListStr;
-      }
-    });
-  }
-
-  addClear();
 }
+
+
+//刪除單筆預購品項
+function addClear(){
+  cart.addEventListener('click', function(e){
+    console.log(e);
+
+    if(e.target.getAttribute("class")!=="col-1 clear btn"){
+      return;
+    }else{
+      let num = e.target.getAttribute("data-num");
+      console.log(num);
+      addCartList.splice(num,1);
+      console.log(addCartList);
+      alert("刪除成功！");
+      
+      let CartListStr = "";
+      console.log(CartListStr);
+
+      if(num == 0){
+        console.log("沒資料了");
+        cart.innerHTML = `<div class="row col-md-8 py-3 mx-auto cart-body" >
+        <div class="col-5">目前未選購</div>
+        <div class="col-3"></div>
+        <div class="col-3"></div>
+        <div class="col-1 clear btn">
+        </div>
+        </div>`
+      }
+
+      addCartList.forEach(function(item,index){
+        CartListStr += `<div class="row col-md-8 py-3 mx-auto cart-body" >
+        <div class="col-5">${item.name}</div>
+        <div class="col-3">1</div>
+        <div class="col-3">${item.price}</div>
+        <div class="col-1 clear btn" data-num="${index}">
+        X 
+        </div>
+        </div>`
+    
+        console.log(CartListStr);
+        cart.innerHTML = CartListStr;
+
+      })
+       
+    }});  
+}
+
+addClear();
 
 
 
