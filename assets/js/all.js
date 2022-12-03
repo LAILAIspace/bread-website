@@ -140,25 +140,38 @@ function addCart(id) {
     CartListStr += "<div class=\"row col-md-8 py-3 mx-auto cart-body\" >\n    <div class=\"col-5\">".concat(item.name, "</div>\n    <div class=\"col-3\">1</div>\n    <div class=\"col-3\">").concat(item.price, "</div>\n    <div class=\"col-1 clear btn\" data-num=\"").concat(index, "\">\n    X \n    </div>\n    </div>");
     console.log(CartListStr);
     cart.innerHTML = CartListStr;
-  }); //刪除單筆預購品項
+  });
+} //刪除單筆預購品項
 
-  function addClear() {
-    cart.addEventListener('click', function (e) {
-      console.log(e);
 
-      if (e.target.getAttribute("class") !== "clear") {
-        return;
-      } else {
-        var num = e.target.getAttribute("data-num");
-        console.log(num);
-        CartListStr.splice(num, 1);
-        console.log(CartListStr);
-        alert("刪除成功！");
-        cart.innerHTML = CartListStr;
+function addClear() {
+  cart.addEventListener('click', function (e) {
+    console.log(e);
+
+    if (e.target.getAttribute("class") !== "col-1 clear btn") {
+      return;
+    } else {
+      var num = e.target.getAttribute("data-num");
+      console.log(num);
+      addCartList.splice(num, 1);
+      console.log(addCartList);
+      alert("刪除成功！");
+      var CartListStr = "";
+      console.log(CartListStr);
+
+      if (num == 0) {
+        console.log("沒資料了");
+        cart.innerHTML = "<div class=\"row col-md-8 py-3 mx-auto cart-body\" >\n        <div class=\"col-5\">\u76EE\u524D\u672A\u9078\u8CFC</div>\n        <div class=\"col-3\"></div>\n        <div class=\"col-3\"></div>\n        <div class=\"col-1 clear btn\">\n        </div>\n        </div>";
       }
-    });
-  }
 
-  addClear();
+      addCartList.forEach(function (item, index) {
+        CartListStr += "<div class=\"row col-md-8 py-3 mx-auto cart-body\" >\n        <div class=\"col-5\">".concat(item.name, "</div>\n        <div class=\"col-3\">1</div>\n        <div class=\"col-3\">").concat(item.price, "</div>\n        <div class=\"col-1 clear btn\" data-num=\"").concat(index, "\">\n        X \n        </div>\n        </div>");
+        console.log(CartListStr);
+        cart.innerHTML = CartListStr;
+      });
+    }
+  });
 }
+
+addClear();
 //# sourceMappingURL=all.js.map
