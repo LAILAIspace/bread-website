@@ -91,42 +91,73 @@ function renderCard() {
 
 renderCard(); //按鈕：加入預購清單
 
-var cart = document.querySelector(".cart-body-area");
-var btn0 = document.querySelector(".btn0");
-var btn1 = document.querySelector(".btn1");
-var btn2 = document.querySelector(".btn2");
-var btn3 = document.querySelector(".btn3");
-var btn4 = document.querySelector(".btn4");
-var btn5 = document.querySelector(".btn5");
-var btn6 = document.querySelector(".btn6");
-var btn7 = document.querySelector(".btn7");
-var btn8 = document.querySelector(".btn8");
-btn0.addEventListener('click', function (e) {
-  addCart(0); // console.log(e);
+var cart = document.querySelector(".cart-body-area"); // const btn0 = document.querySelector(".btn0");
+// btn0.addEventListener('click', function(e) {
+//   addCart(0);
+// });
+
+$(function () {
+  var btn0 = jQuery('.btn0');
+  btn0.click(function (e) {
+    alert('已加入預購單!');
+    addCart(0);
+  });
 });
-btn1.addEventListener('click', function (e) {
-  addCart(1);
+$(function () {
+  var btn1 = jQuery('.btn1');
+  btn1.click(function (e) {
+    alert('已加入預購單!');
+    addCart(1);
+  });
 });
-btn2.addEventListener('click', function (e) {
-  addCart(2);
+$(function () {
+  var btn2 = jQuery('.btn2');
+  btn2.click(function (e) {
+    alert('已加入預購單!');
+    addCart(2);
+  });
 });
-btn3.addEventListener('click', function (e) {
-  addCart(3);
+$(function () {
+  var btn3 = jQuery('.btn3');
+  btn3.click(function (e) {
+    alert('已加入預購單!');
+    addCart(3);
+  });
 });
-btn4.addEventListener('click', function (e) {
-  addCart(4);
+$(function () {
+  var btn4 = jQuery('.btn4');
+  btn4.click(function (e) {
+    alert('已加入預購單!');
+    addCart(4);
+  });
 });
-btn5.addEventListener('click', function (e) {
-  addCart(5);
+$(function () {
+  var btn5 = jQuery('.btn5');
+  btn5.click(function (e) {
+    alert('已加入預購單!');
+    addCart(5);
+  });
 });
-btn6.addEventListener('click', function (e) {
-  addCart(6);
+$(function () {
+  var btn6 = jQuery('.btn6');
+  btn6.click(function (e) {
+    alert('已加入預購單!');
+    addCart(6);
+  });
 });
-btn7.addEventListener('click', function (e) {
-  addCart(7);
+$(function () {
+  var btn7 = jQuery('.btn7');
+  btn7.click(function (e) {
+    alert('已加入預購單!');
+    addCart(7);
+  });
 });
-btn8.addEventListener('click', function (e) {
-  addCart(8);
+$(function () {
+  var btn8 = jQuery('.btn8');
+  btn8.click(function (e) {
+    alert('已加入預購單!');
+    addCart(8);
+  });
 });
 
 function addCart(id) {
@@ -173,5 +204,35 @@ function addClear() {
   });
 }
 
-addClear();
+addClear(); //訂單送出跳出視窗
+// console.log(jQuery)
+
+$(function () {
+  var orderBtn = jQuery('.orderInfo-btn');
+  orderBtn.click(function (e) {
+    if ($("#customerName").val().length === 0) {
+      alert('請檢查欄位確實填寫');
+      e.preventDefault();
+      return;
+    } else if ($("#customerPhone").val().length === 0) {
+      alert('請檢查欄位確實填寫');
+      e.preventDefault();
+      return;
+    } else if ($("#customerEmail").val().length === 0) {
+      alert('請檢查欄位確實填寫');
+      e.preventDefault();
+      return;
+    }
+
+    alert('訂單已送出!'); //清空表單
+
+    $("#customerName").val("");
+    $("#customerPhone").val("");
+    $("#customerEmail").val(""); //清空購物車
+
+    cart.innerHTML = "<div class=\"row col-md-8 py-3 mx-auto cart-body\" >\n    <div class=\"col-5\">\u76EE\u524D\u672A\u9078\u8CFC</div>\n    <div class=\"col-3\"></div>\n    <div class=\"col-3\"></div>\n    <div class=\"col-1 clear btn\">\n    </div>\n    </div>"; //避免畫面重整
+
+    e.preventDefault();
+  });
+});
 //# sourceMappingURL=all.js.map
